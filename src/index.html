@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>AnyShop</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+<div class="header">
+    <nav class="navbar navbar-expand-lg">
+
+        <div class="container-fluid">
+            <div class="row desctop-menu">
+                <div class="col-xl-3 col-lg-4 col-md-4">
+                    <a class="navbar-brand" href="index.html">AnyShop</a>
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Gift Cards</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-xl-7 col-lg-6 col-md-6">
+
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+
+                </div>
+
+                <div class="col-xl-2 col-lg-2 col-md-2 login-register">
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item login-register-link">
+                            <a class="nav-link" href="login.html">Login</a> | <a class="nav-link" href="register.html">Register</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="row phone-menu">
+                <div class="col-md-1 col-sm-1 col-2">
+
+                    <label for="mobile-menu"><img class="scale-img" src="img/Vector-burger_menu_icon.svg"></label>
+                </div>
+                <input type="radio" id="mobile-menu" name="mobile-menu">
+                <div class="mobile-menu-list" id="MobileMenuList">
+
+                    <div class="mobile-menu-list-header">
+
+                        <div class="heading">Menu</div>
+                        <div class="mobile-menu-list-close">
+                            <input type="radio" id="mobile-menu-close" name="mobile-menu">
+                            <label for="mobile-menu-close">
+                                <img class="scale-img" src="img/Vector-mobile-menu-close-img.svg">
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="mobile-menu-list-content">
+                        <ul class="list-group">
+                            <li class="list-group-item list-item">
+                                <a href="#">Sale</a>
+                            </li>
+
+                            <li class="list-group-item list-item">
+                                <a href="#">Gift cards</a>
+                            </li>
+
+                            <li class="list-group-item list-item">
+                                <a href="login.html">Login</a>
+                            </li>
+
+                            <li class="list-group-item list-item">
+                                <a href="register.html">Register</a>
+                            </li>
+
+                            <li class="list-group-item list-item">
+                                <label class="open-mobile-chat" for="OpenMobileChat"><span>Have a question?</span> <img
+                                        src="img/Vector-message.svg"></label>
+                                <input type="radio" id="OpenMobileChat" name="OpenMobileChat">
+
+                                <div class="MobileChat" id="MobileChat">
+                                    <div class="mobile-menu-list-header">
+
+                                        <div class="close-categories-list">
+                                            <img src="img/Vector-phone-header-prev.svg" onclick="document.getElementById('OpenMobileChat').checked=false;">
+                                        </div>
+
+                                        <div class="heading">Have a question?</div>
+
+                                        <div class="mobile-menu-list-close">
+                                            <img class="scale-img" src="img/Vector-mobile-menu-close-img.svg" onclick="document.getElementById('OpenMobileChat').checked=false;
+                                        document.getElementById('mobile-menu').checked=false">
+                                        </div>
+                                    </div>
+
+                                    <div class="mobile-chat-content">
+                                        <div class="mobile-chat-message"></div>
+                                        <div class="mobile-chat-new-message">
+                                            <input type="text" id="MobileNewMessageToSend" name="MobileNewMessage">
+                                            <button class="btn"><img src="img/Vector-chat-message-icon.svg" alt=""></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mobile-menu-list-heading-categories">
+                        <p>Product categories</p>
+                    </div>
+
+                    <div class="mobile-menu-list-product-categories">
+
+                        <ul class="list-group">
+                            <li class="list-group-item list-item">
+
+                                <input type="radio" id="CameraPhotoMobile" name="CameraPhotoMobile">
+                                <label for="CameraPhotoMobile">
+                                    Camera & photo</label>
+                                <img src="img/Vector-menu_item.svg" alt="">
+
+                                <div id="CameraPhoto-MobileList">
+                                    <div class="mobile-menu-list-header">
+
+                                        <div class="close-categories-list">
+                                            <img src="img/Vector-phone-header-prev.svg"
+                                                 onclick="document.getElementById('CameraPhotoMobile').checked=false;">
+                                        </div>
+
+                                        <div class="heading">Camera & photo</div>
+
+                                        <div class="mobile-menu-list-close">
+                                            <img class="scale-img" src="img/Vector-mobile-menu-close-img.svg" alt="" onclick="document.getElementById('CameraPhotoMobile').checked=false;
+                                        document.getElementById('mobile-menu').checked=false">
+                                        </div>
+                                    </div>
+
+                                    <ul class="list-group">
+                                        <li class="list-group-item list-item"><a href="#">Accessories</a></li>
+                                        <li class="list-group-item list-item"><a href="#">Action Cameras & Accessories</a></li>
+                                        <li class="list-group-item list-item"><a href="#"> Binoculars, Telescopes & Optics</a></li>
+                                        <li class="list-group-item list-item"><a href="#">Camcorders</a></li>
+                                        <li class="list-group-item list-item"><a href="DigitalCameras.html">Digital Cameras</a></li>
+                                        <li class="list-group-item list-item"><a href="#">Digital Picture Frames</a></li>
+                                        <li class="list-group-item list-item"><a href="#">Film Cameras</a></li>
+                                        <li class="list-group-item list-item"><a href="#">Film Scanners</a></li>
+                                        <li class="list-group-item list-item"><a href="#">Flashes</a></li>
+                                        <li class="list-group-item list-item"><a href="#">Lenses</a></li>
+                                        <li class="list-group-item list-item"><a href="#">Photo Printers</a></li>
+                                        <li class="list-group-item list-item"><a href="#">Slide Projectors</a></li>
+                                        <li class="list-group-item list-item"><a href="#">Slide Viewers</a></li>
+                                        <li class="list-group-item list-item"><a href="#">Surveillance Cameras</a></li>
+                                        <li class="list-group-item list-item"><a href="#">Tripods & Monopods</a></li>
+                                        <li class="list-group-item list-item"><a href="#">Underwater Video & Photography</a></li>
+                                        <li class="list-group-item list-item"><a href="#">Video Projectors</a></li>
+                                    </ul>
+                                </div>
+
+                            </li>
+                            <li class="list-group-item list-item">
+
+                                <input type="radio" id="HomeCinemaTvVideoMobile" name="HomeCinemaTvVideoMobile">
+                                <label for="HomeCinemaTvVideoMobile">
+                                    Home Cinema, TV & Video</label>
+                                <img src="img/Vector-menu_item.svg" alt="">
+
+                                <div id="HomeCinemaTvVideo-MobileList">
+                                    <div class="mobile-menu-list-header">
+
+                                        <div class="close-categories-list">
+                                            <img src="img/Vector-phone-header-prev.svg"
+                                                 onclick="document.getElementById('HomeCinemaTvVideoMobile').checked=false;">
+                                        </div>
+
+                                        <div class="heading">Home Cinema, TV & Video</div>
+
+                                        <div class="mobile-menu-list-close">
+                                            <img class="scale-img" src="img/Vector-mobile-menu-close-img.svg" onclick="document.getElementById('HomeCinemaTvVideoMobile').checked=false;
+                                        document.getElementById('mobile-menu').checked=false">
+                                        </div>
+                                    </div>
+
+                                    <ul class="list-group">
+                                        <li class="list-group-item list-item"><a href="#">item 1</a></li>
+                                        <li class="list-group-item list-item"><a href="#">item 2</a></li>
+                                        <li class="list-group-item list-item"><a href="#">item 3</a></li>
+
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="list-group-item list-item">
+
+                                <input type="radio" id="MobilePhonesMobile" name="MobilePhonesMobile">
+                                <label for="MobilePhonesMobile">
+                                    Mobile Phones</label>
+                                <img src="img/Vector-menu_item.svg" alt="">
+
+                                <div id="MobilePhones-MobileList">
+                                    <div class="mobile-menu-list-header">
+
+                                        <div class="close-categories-list">
+                                            <img src="img/Vector-phone-header-prev.svg"
+                                                 onclick="document.getElementById('MobilePhonesMobile').checked=false;">
+                                        </div>
+
+                                        <div class="heading">Mobile Phones</div>
+
+                                        <div class="mobile-menu-list-close">
+                                            <img class="scale-img" src="img/Vector-mobile-menu-close-img.svg" onclick="document.getElementById('MobilePhonesMobile').checked=false;
+                                        document.getElementById('mobile-menu').checked=false">
+                                        </div>
+                                    </div>
+
+                                    <ul class="list-group">
+                                        <li class="list-group-item list-item"><a href="#">item 1</a></li>
+                                        <li class="list-group-item list-item"><a href="#">item 2</a></li>
+                                        <li class="list-group-item list-item"><a href="#">item 3</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="list-group-item list-item">
+
+                                <input type="radio" id="ComputersComponentsMobile" name="ComputersComponentsMobile">
+                                <label for="ComputersComponentsMobile">
+                                    Computers & Components</label>
+                                <img src="img/Vector-menu_item.svg" alt="">
+
+                                <div id="ComputersComponents-MobileList">
+                                    <div class="mobile-menu-list-header">
+
+                                        <div class="close-categories-list">
+                                            <img src="img/Vector-phone-header-prev.svg"
+                                                 onclick="document.getElementById('ComputersComponentsMobile').checked=false;">
+                                        </div>
+
+                                        <div class="heading">Computers & Components</div>
+
+                                        <div class="mobile-menu-list-close">
+                                            <img class="scale-img" src="img/Vector-mobile-menu-close-img.svg" onclick="document.getElementById('ComputersComponentsMobile').checked=false;
+                                        document.getElementById('mobile-menu').checked=false">
+                                        </div>
+                                    </div>
+
+                                    <ul class="list-group">
+                                        <li class="list-group-item list-item"><a href="#">item 1</a></li>
+                                        <li class="list-group-item list-item"><a href="#">item 2</a></li>
+                                        <li class="list-group-item list-item"><a href="#">item 3</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="col-md-2 col-sm-3 col-3">
+                    <a class="navbar-brand" href="index.html">AnyShop</a>
+                </div>
+                <div class="col-md-1 offset-md-8 col-sm-1 offset-sm-7 col-2 offset-5 mobile-search">
+                    <input type="checkbox" id="MobileFormSearch" name="MobileFormSearch">
+                    <label for="MobileFormSearch"><img class="scale-img" src="img/Vector-search.svg"></label>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-primary " type="submit">Search</button>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+    </nav>
+</div>
+
+<div class="bg-list-group-item" id="bg-list-group-item" onclick="DesctopSidebar()">
+
+</div>
+
+<div class="content container-fluid">
+
+    <div class="row">
+        <div class="sidebar-wrapper col-xl-3 col-lg-4 col-md-12  order-xl-1 order-lg-1 order-md-2 order-sm-2 order-2">
+
+            <ul class="list-group">
+                <li class="list-group-item list-item">
+
+                    <input type="radio" id="CameraPhoto" name="menu-item">
+                    <label for="CameraPhoto" onclick="OpenBgSidebarDesctop(); MobileSidebarOnClickCameraPhoto();">
+                        Camera & photo</label>
+                    <img src="img/Vector-menu_item.svg" alt="">
+
+                    <ul class="list-group" id="CameraPhoto-List">
+                        <li class="list-group-item ">
+                            <a href="#">Accessories</a>
+                            <a href="#">Action Cameras & Accessories</a>
+                            <a href="#"> Binoculars, Telescopes & Optics</a>
+                            <a href="#">Camcorders</a>
+                            <a href="DigitalCameras.html">Digital Cameras</a>
+                            <a href="#">Digital Picture Frames</a>
+                            <a href="#">Film Cameras</a>
+                            <a href="#">Film Scanners</a>
+                            <a href="#">Flashes</a>
+                            <a href="#">Lenses</a>
+                            <a href="#">Photo Printers</a>
+                            <a href="#">Slide Projectors</a>
+                            <a href="#">Slide Viewers</a>
+                            <a href="#">Surveillance Cameras</a>
+                            <a href="#">Tripods & Monopods</a>
+                            <a href="#">Underwater Video & Photography</a>
+                            <a href="#">Video Projectors</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="list-group-item list-item">
+
+                    <input type="radio" id="HomeCinemaTvVideo" name="menu-item">
+                    <label for="HomeCinemaTvVideo" onclick="OpenBgSidebarDesctop(); MobileSidebarOnClickHomeCinemaTvVideo();">
+                        Home Cinema, TV & Video</label>
+                    <img src="img/Vector-menu_item.svg" alt="">
+
+                    <ul class="list-group" id="HomeCinemaTvVideo-List">
+                        <li class="list-group-item ">
+                            <a href="#">item 1</a>
+                            <a href="#">item 2</a>
+                            <a href="#">item 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="list-group-item list-item">
+
+                    <input type="radio" id="MobilePhones" name="menu-item">
+                    <label for="MobilePhones" onclick="OpenBgSidebarDesctop(); MobileSidebarOnClickMobilePhones();">
+                        Mobile Phones</label>
+                    <img src="img/Vector-menu_item.svg" alt="">
+
+                    <ul class="list-group" id="MobilePhones-List">
+                        <li class="list-group-item">
+                            <a href="#">item 1</a>
+                            <a href="#">item 2</a>
+                            <a href="#">item 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="list-group-item list-item">
+
+                    <input type="radio" id="ComputersComponents" name="menu-item">
+                    <label for="ComputersComponents" onclick="OpenBgSidebarDesctop(); MobileSidebarOnClickComputersComponents();">
+                        Computers & Components</label>
+                    <img src="img/Vector-menu_item.svg" alt="">
+
+                    <ul class="list-group Computers-Components" id="ComputersComponents-List">
+                        <li class="list-group-item">
+                            <a href="#">item 1</a>
+                            <a href="#">item 2</a>
+                            <a href="#">item 3</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="carousel-wrapper col-xl-9 col-lg-8 col-md-12  order-xl-2 order-lg-2 order-md-1 order-sm-1 order-1">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+
+                        <div class="slide-1">
+                            <div class="slide-1__info">
+
+                                <div class="slide-1__info-text">Redmi<br>Note 8 Pro</div>
+
+                                <button class="slide-1__info-btn btn" type="button">
+                                    <span>View all DEALS</span>
+                                    <img src="img/Vector-btn_open.svg" alt="">
+                                </button>
+                            </div>
+
+                            <div class="slide-1__sale">
+                                <p>UP TO </p>
+                                <span class="text-bold">15%</span>
+                                <span>OFF</span>
+
+                            </div>
+
+                            <div class="slide-1__img">
+                                <!--  <img src="img/redmi-note-8.png"> -->
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+
+                        <div class="slide-1">
+                            <div class="slide-1__info">
+
+                                <div class="slide-1__info-text">Redmi<br>Note 8 Pro</div>
+
+                                <button class="slide-1__info-btn btn" type="button">
+                                    <span>View all DEALS</span>
+                                    <img src="img/Vector-btn_open.svg" alt="">
+                                </button>
+                            </div>
+
+                            <div class="slide-1__sale">
+                                <p>UP TO </p>
+                                <span class="text-bold">15%</span>
+                                <span>OFF</span>
+
+                            </div>
+
+                            <div class="slide-1__img">
+                                <!--  <img src="img/redmi-note-8.png"> -->
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+
+                        <div class="slide-1">
+                            <div class="slide-1__info">
+
+                                <div class="slide-1__info-text">Redmi<br>Note 8 Pro</div>
+
+                                <button class="slide-1__info-btn btn" type="button">
+                                    <span>View all DEALS</span>
+                                    <img src="img/Vector-btn_open.svg" alt="">
+                                </button>
+                            </div>
+
+                            <div class="slide-1__sale">
+                                <p>UP TO </p>
+                                <span class="text-bold">15%</span>
+                                <span>OFF</span>
+
+                            </div>
+
+                            <div class="slide-1__img">
+                                <!--  <img src="img/redmi-note-8.png"> -->
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+
+                        <div class="slide-1">
+                            <div class="slide-1__info">
+
+                                <div class="slide-1__info-text">Redmi<br>Note 8 Pro</div>
+
+                                <button class="slide-1__info-btn btn" type="button">
+                                    <span>View all DEALS</span>
+                                    <img src="img/Vector-btn_open.svg" alt="">
+                                </button>
+                            </div>
+
+                            <div class="slide-1__sale">
+                                <p>UP TO </p>
+                                <span class="text-bold">15%</span>
+                                <span>OFF</span>
+
+                            </div>
+
+                            <div class="slide-1__img">
+                                <!--  <img src="img/redmi-note-8.png"> -->
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true">
+                            <img src="img/Vector-carousel_prev.svg">
+                        </span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true">
+                            <img src="img/Vector-carousel_next.svg">
+                        </span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xl-9 offset-xl-3 col-lg-8 offset-lg-4 col-md-12">
+            <p class="text-recommendations">Top Recommendations for You</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xl-3 offset-xl-3 col-lg-4 offset-lg-4 col-md-12">
+            <div class="card home-desctop-card">
+                <div class="card-photo">
+                    <img src="img/img_card/1111.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Virtual Reality Headset for Smartphone(white) Homido</p>
+                    <div class="card-rating">
+                        <span class="card-rating-1">&#9734;</span>
+                        <span class="card-rating-2">&#9734;</span>
+                        <span class="card-rating-3">&#9734;</span>
+                        <span class="card-rating-4">&#9734;</span>
+                        <span class="card-rating-5">&#9734;</span>
+                    </div>
+                    <p class="card-price">&euro; 399</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-12">
+            <div class="card home-desctop-card">
+                <div class="card-photo">
+                    <img src="img/img_card/2222.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Mikme Microphone, Black</p>
+                    <div class="card-rating">
+                        <span class="card-rating-1">&#9734;</span>
+                        <span class="card-rating-2">&#9734;</span>
+                        <span class="card-rating-3">&#9734;</span>
+                        <span class="card-rating-4">&#9734;</span>
+                        <span class="card-rating-5">&#9734;</span>
+                    </div>
+                    <p class="card-price">&euro; 47.31</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 offset-xl-0 col-lg-4 offset-lg-4 col-md-12">
+            <div class="card home-desctop-card">
+                <div class="card-photo">
+                    <img src="img/img_card/333.png" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Victrola Pro USB Bluetooth Turntable Vinyl to MP3 Function</p>
+                    <div class="card-rating">
+                        <span class="card-rating-1">&#9734;</span>
+                        <span class="card-rating-2">&#9734;</span>
+                        <span class="card-rating-3">&#9734;</span>
+                        <span class="card-rating-4">&#9734;</span>
+                        <span class="card-rating-5">&#9734;</span>
+                    </div>
+                    <p class="card-price-sale">&euro; 129.92 <span>&euro;150</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 offset-xl-3 col-lg-4 col-md-12">
+            <div class="card home-desctop-card">
+                <div class="card-photo">
+                    <img src="img/img_card/4444.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                    <p class="card-text">ANKER Zolo Liberty White</p>
+                    <div class="card-rating">
+                        <span class="card-rating-1">&#9734;</span>
+                        <span class="card-rating-2">&#9734;</span>
+                        <span class="card-rating-3">&#9734;</span>
+                        <span class="card-rating-4">&#9734;</span>
+                        <span class="card-rating-5">&#9734;</span>
+                    </div>
+                    <p class="card-price-sale">&euro; 42.00 <span>&euro;53.00</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 offset-xl-0 col-lg-4 offset-lg-4 col-md-12">
+            <div class="card home-desctop-card">
+                <div class="card-photo">
+                    <img src="img/img_card/5555.png" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Libratone Zipp Wireless Speaker</p>
+                    <div class="card-rating">
+                        <span class="card-rating-1">&#9734;</span>
+                        <span class="card-rating-2">&#9734;</span>
+                        <span class="card-rating-3">&#9734;</span>
+                        <span class="card-rating-4">&#9734;</span>
+                        <span class="card-rating-5">&#9734;</span>
+                    </div>
+                    <p class="card-price">&euro; 311</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-12">
+            <div class="card home-desctop-card">
+                <div class="card-photo">
+                    <img src="img/img_card/3333.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Xiaomi Mi Headphones 2 (white)</p>
+                    <div class="card-rating">
+                        <span class="card-rating-1">&#9734;</span>
+                        <span class="card-rating-2">&#9734;</span>
+                        <span class="card-rating-3">&#9734;</span>
+                        <span class="card-rating-4">&#9734;</span>
+                        <span class="card-rating-5">&#9734;</span>
+                    </div>
+                    <p class="card-price">&euro; 299.00</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-xl-3 col-lg-4 chat-wrapper">
+            <div class="chat">
+
+                <div class="header">
+                    <label for="OpenChat">
+                        <p class="header-text">Have a question?</p>
+                        <img class="header-logo" src="img/Vector-chat_header-icon.svg">
+                    </label>
+                </div>
+
+                <input type="checkbox" id="OpenChat" name="OpenChat">
+                <div class="chat-content">
+
+                    <div class="message"></div>
+
+                    <div class="new-message">
+                        <input type="text" id="NewMessageToSend" name="NewMessage">
+                        <button class="btn"><img src="img/Vector-chat-message-icon.svg"></button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer container-fluid">
+    <div class="row">
+
+        <div class="col-xl-5 col-lg-6 col-md-7 col-sm-12 footer-nav">
+                <span><a href="#">Terms and Conditions</a> <span class="footer-nav-border">|</span> <a href="#">Privacy</a> <span
+                        class="footer-nav-border">|</span> <a href="#">Cookies</a> <span class="footer-nav-border">|</span> <a href="#">Home shopping
+                        guarantee</a></span>
+
+        </div>
+        <div class="col-xl-4 offset-xl-3 col-lg-4 offset-lg-2 col-md-5 col-sm-12 footer-info">
+            <span>&copy; 1998-2019, AnyShop.com, Inc. or its affiliates</span>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="js/OpenBgSidebarDesctop.js"></script>
+<script src="js/DesctopSidebar.js"></script>
+<script src="js/MobileSidebarOnClickCameraPhoto.js"></script>
+<script src="js/MobileSidebarOnClickHomeCinemaTvVideo.js"></script>
+<script src="js/MobileSidebarOnClickMobilePhones.js"></script>
+<script src="js/MobileSidebarOnClickComputersComponents.js"></script>
+
+</body>
+
+</html>

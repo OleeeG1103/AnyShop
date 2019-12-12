@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Register / AnyShop</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+<div class="header">
+    <nav class="navbar navbar-expand-lg">
+
+        <div class="container-fluid">
+            <div class="row desctop-menu">
+                <div class="col-xl-3 col-lg-4 col-md-4">
+                    <a class="navbar-brand" href="index.html">AnyShop</a>
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Gift Cards</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-xl-7 col-lg-6 col-md-6">
+
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+
+                </div>
+
+                <div class="col-xl-2 col-lg-2 col-md-2 login-register">
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item login-register-link">
+                            <a class="nav-link" href="login.html">Login</a> | <a class="nav-link" href="register.html">Register</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="row phone-menu">
+                <div class="col-md-1 col-sm-1 col-2">
+
+                    <label for="mobile-menu"><img class="scale-img" src="img/Vector-burger_menu_icon.svg"></label>
+                </div>
+                <input type="radio" id="mobile-menu" name="mobile-menu">
+                <div class="mobile-menu-list" id="MobileMenuList">
+
+                    <div class="mobile-menu-list-header">
+
+                        <div class="heading">Menu</div>
+                        <div class="mobile-menu-list-close">
+                            <input type="radio" id="mobile-menu-close" name="mobile-menu">
+                            <label for="mobile-menu-close">
+                                <img class="scale-img" src="img/Vector-mobile-menu-close-img.svg">
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="mobile-menu-list-content">
+                        <ul class="list-group">
+                            <li class="list-group-item list-item">
+                                <a href="#">Sale</a>
+                            </li>
+
+                            <li class="list-group-item list-item">
+                                <a href="#">Gift cards</a>
+                            </li>
+
+                            <li class="list-group-item list-item">
+                                <a href="login.html">Login</a>
+                            </li>
+
+                            <li class="list-group-item list-item">
+                                <a href="register.html">Register</a>
+                            </li>
+
+                            <li class="list-group-item list-item">
+                                <label class="open-mobile-chat" for="OpenMobileChat"><span>Have a question?</span> <img
+                                        src="img/Vector-message.svg"></label>
+                                <input type="radio" id="OpenMobileChat" name="OpenMobileChat">
+
+                                <div class="MobileChat" id="MobileChat">
+                                    <div class="mobile-menu-list-header">
+
+                                        <div class="close-categories-list">
+                                            <img src="img/Vector-phone-header-prev.svg" onclick="document.getElementById('OpenMobileChat').checked=false;">
+                                        </div>
+
+                                        <div class="heading">Have a question?</div>
+
+                                        <div class="mobile-menu-list-close">
+                                            <img class="scale-img" src="img/Vector-mobile-menu-close-img.svg" onclick="document.getElementById('OpenMobileChat').checked=false;
+                                        document.getElementById('mobile-menu').checked=false">
+                                        </div>
+                                    </div>
+
+                                    <div class="mobile-chat-content">
+                                        <div class="mobile-chat-message"></div>
+                                        <div class="mobile-chat-new-message">
+                                            <input type="text" id="MobileNewMessageToSend" name="MobileNewMessage">
+                                            <button class="btn"><img src="img/Vector-chat-message-icon.svg" alt=""></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mobile-menu-list-heading-categories">
+                        <p>Product categories</p>
+                    </div>
+
+                    <div class="mobile-menu-list-product-categories">
+
+                        <ul class="list-group">
+                            <li class="list-group-item list-item">
+
+                                <input type="radio" id="CameraPhotoMobile" name="CameraPhotoMobile">
+                                <label for="CameraPhotoMobile">
+                                    Camera & photo</label>
+                                <img src="img/Vector-menu_item.svg" alt="">
+
+                                <div id="CameraPhoto-MobileList">
+                                    <div class="mobile-menu-list-header">
+
+                                        <div class="close-categories-list">
+                                            <img src="img/Vector-phone-header-prev.svg"
+                                                 onclick="document.getElementById('CameraPhotoMobile').checked=false;">
+                                        </div>
+
+                                        <div class="heading">Camera & photo</div>
+
+                                        <div class="mobile-menu-list-close">
+                                            <img class="scale-img" src="img/Vector-mobile-menu-close-img.svg" alt="" onclick="document.getElementById('CameraPhotoMobile').checked=false;
+                                        document.getElementById('mobile-menu').checked=false">
+                                        </div>
+                                    </div>
+
+                                    <ul class="list-group">
+                                        <li class="list-group-item list-item"><a href="#">Accessories</a></li>
+                                        <li class="list-group-item list-item"><a href="#">Action Cameras & Accessories</a></li>
+                                        <li class="list-group-item list-item"><a href="#"> Binoculars, Telescopes & Optics</a></li>
+                                        <li class="list-group-item list-item"><a href="#">Camcorders</a></li>
+                                        <li class="list-group-item list-item"><a href="DigitalCameras.html">Digital Cameras</a></li>
+                                        <li class="list-group-item list-item"><a href="#">Digital Picture Frames</a></li>
+                                        <li class="list-group-item list-item"><a href="#">Film Cameras</a></li>
+                                        <li class="list-group-item list-item"><a href="#">Film Scanners</a></li>
+                                        <li class="list-group-item list-item"><a href="#">Flashes</a></li>
+                                        <li class="list-group-item list-item"><a href="#">Lenses</a></li>
+                                        <li class="list-group-item list-item"><a href="#">Photo Printers</a></li>
+                                        <li class="list-group-item list-item"><a href="#">Slide Projectors</a></li>
+                                        <li class="list-group-item list-item"><a href="#">Slide Viewers</a></li>
+                                        <li class="list-group-item list-item"><a href="#">Surveillance Cameras</a></li>
+                                        <li class="list-group-item list-item"><a href="#">Tripods & Monopods</a></li>
+                                        <li class="list-group-item list-item"><a href="#">Underwater Video & Photography</a></li>
+                                        <li class="list-group-item list-item"><a href="#">Video Projectors</a></li>
+                                    </ul>
+                                </div>
+
+                            </li>
+                            <li class="list-group-item list-item">
+
+                                <input type="radio" id="HomeCinemaTvVideoMobile" name="HomeCinemaTvVideoMobile">
+                                <label for="HomeCinemaTvVideoMobile">
+                                    Home Cinema, TV & Video</label>
+                                <img src="img/Vector-menu_item.svg" alt="">
+
+                                <div id="HomeCinemaTvVideo-MobileList">
+                                    <div class="mobile-menu-list-header">
+
+                                        <div class="close-categories-list">
+                                            <img src="img/Vector-phone-header-prev.svg"
+                                                 onclick="document.getElementById('HomeCinemaTvVideoMobile').checked=false;">
+                                        </div>
+
+                                        <div class="heading">Home Cinema, TV & Video</div>
+
+                                        <div class="mobile-menu-list-close">
+                                            <img class="scale-img" src="img/Vector-mobile-menu-close-img.svg" onclick="document.getElementById('HomeCinemaTvVideoMobile').checked=false;
+                                        document.getElementById('mobile-menu').checked=false">
+                                        </div>
+                                    </div>
+
+                                    <ul class="list-group">
+                                        <li class="list-group-item list-item"><a href="#">item 1</a></li>
+                                        <li class="list-group-item list-item"><a href="#">item 2</a></li>
+                                        <li class="list-group-item list-item"><a href="#">item 3</a></li>
+
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="list-group-item list-item">
+
+                                <input type="radio" id="MobilePhonesMobile" name="MobilePhonesMobile">
+                                <label for="MobilePhonesMobile">
+                                    Mobile Phones</label>
+                                <img src="img/Vector-menu_item.svg" alt="">
+
+                                <div id="MobilePhones-MobileList">
+                                    <div class="mobile-menu-list-header">
+
+                                        <div class="close-categories-list">
+                                            <img src="img/Vector-phone-header-prev.svg"
+                                                 onclick="document.getElementById('MobilePhonesMobile').checked=false;">
+                                        </div>
+
+                                        <div class="heading">Mobile Phones</div>
+
+                                        <div class="mobile-menu-list-close">
+                                            <img class="scale-img" src="img/Vector-mobile-menu-close-img.svg" onclick="document.getElementById('MobilePhonesMobile').checked=false;
+                                        document.getElementById('mobile-menu').checked=false">
+                                        </div>
+                                    </div>
+
+                                    <ul class="list-group">
+                                        <li class="list-group-item list-item"><a href="#">item 1</a></li>
+                                        <li class="list-group-item list-item"><a href="#">item 2</a></li>
+                                        <li class="list-group-item list-item"><a href="#">item 3</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="list-group-item list-item">
+
+                                <input type="radio" id="ComputersComponentsMobile" name="ComputersComponentsMobile">
+                                <label for="ComputersComponentsMobile">
+                                    Computers & Components</label>
+                                <img src="img/Vector-menu_item.svg" alt="">
+
+                                <div id="ComputersComponents-MobileList">
+                                    <div class="mobile-menu-list-header">
+
+                                        <div class="close-categories-list">
+                                            <img src="img/Vector-phone-header-prev.svg"
+                                                 onclick="document.getElementById('ComputersComponentsMobile').checked=false;">
+                                        </div>
+
+                                        <div class="heading">Computers & Components</div>
+
+                                        <div class="mobile-menu-list-close">
+                                            <img class="scale-img" src="img/Vector-mobile-menu-close-img.svg" onclick="document.getElementById('ComputersComponentsMobile').checked=false;
+                                        document.getElementById('mobile-menu').checked=false">
+                                        </div>
+                                    </div>
+
+                                    <ul class="list-group">
+                                        <li class="list-group-item list-item"><a href="#">item 1</a></li>
+                                        <li class="list-group-item list-item"><a href="#">item 2</a></li>
+                                        <li class="list-group-item list-item"><a href="#">item 3</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="col-md-2 col-sm-3 col-3">
+                    <a class="navbar-brand" href="index.html">AnyShop</a>
+                </div>
+                <div class="col-md-1 offset-md-8 col-sm-1 offset-sm-7 col-2 offset-5 mobile-search">
+                    <input type="checkbox" id="MobileFormSearch" name="MobileFormSearch">
+                    <label for="MobileFormSearch"><img class="scale-img" src="img/Vector-search.svg"></label>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-primary " type="submit">Search</button>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+    </nav>
+</div>
+
+<div class="content container-fluid">
+    <div class="row">
+        <div class="col-xl-4 offset-xl-4 col-lg-6 offset-lg-3 col-md-6 offset-md-3 col-sm-6 col-10 form-heading-register">
+            <p class="form-heading-text">Register</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xl-4 offset-xl-4 col-lg-6 offset-lg-3 col-md-8 offset-md-2">
+            <form class="login-form">
+                <div class="form-group">
+                    <label for="exampleInputName">Name:</label>
+                    <input type="text" class="form-control" id="exampleInputName">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email:</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" required>
+                </div>
+                <button type="submit" class="btn btn-primary form-login-btn">Buy now</button>
+                <div class="form-group">
+                    <span class="form-link-register">Already have an account? <a href="login.html">Login here</a></span></div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xl-4 offset-xl-4 col-lg-6 offset-lg-3 col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-10  form-heading-or">
+            <p class="form-heading-or-text">OR</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xl-4 offset-xl-4 col-lg-6 offset-lg-3 col-md-8 offset-md-2 social">
+            <button type="button" class="btn social__btn-fb"><img src="img/social-icon/Vector-social-btn-fb.svg"> <span
+                    class="social-btn-text">Facebook</span></button>
+            <button type="button" class="btn social__btn-vk"><img src="img/social-icon/Vector-social-btn-vk.svg"> <span
+                    class="social-btn-text">Vkontakte</span></button>
+            <button type="button" class="btn social__btn-tw"><img src="img/social-icon/Vector-social-btn-tw.svg"> <span
+                    class="social-btn-text">Twitter</span></button>
+        </div>
+    </div>
+</div>
+
+<div class="footer container-fluid">
+    <div class="row">
+        <div class="col-xl-5 col-lg-6 col-md-7 col-sm-12 footer-nav">
+                <span><a href="#">Terms and Conditions</a> <span class="footer-nav-border">|</span> <a href="#">Privacy</a> <span
+                        class="footer-nav-border">|</span> <a href="#">Cookies</a> <span class="footer-nav-border">|</span> <a href="#">Home shopping
+                        guarantee</a></span>
+
+        </div>
+        <div class="col-xl-4 offset-xl-3 col-lg-4 offset-lg-2 col-md-5 col-sm-12 footer-info">
+            <span>&copy; 1998-2019, AnyShop.com, Inc. or its affiliates</span>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

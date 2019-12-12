@@ -1,0 +1,378 @@
+@media (min-width: 992px) {
+  .phone-menu {
+    display: none;
+  }
+
+  #CameraPhoto:checked~#CameraPhoto-List,
+  #HomeCinemaTvVideo:checked~#HomeCinemaTvVideo-List,
+  #MobilePhones:checked~#MobilePhones-List,
+  #ComputersComponents:checked~#ComputersComponents-List {
+    display: block;
+  }
+
+  #CameraPhoto:checked~label,
+  #HomeCinemaTvVideo:checked~label,
+  #MobilePhones:checked~label,
+  #ComputersComponents:checked~label {
+    color: $list-group-item-color-hover;
+    font-weight: 600;
+  }
+
+  .accordion-wrapper {
+    #CameraPhoto:checked ~ .accordion-icon,
+    #HomeCinemaTvVideo:checked ~ .accordion-icon,
+    #MobilePhones:checked ~ .accordion-icon,
+    #ComputersComponents:checked ~ .accordion-icon {
+      transform: rotate(90deg);
+    }
+  }
+
+}
+
+.btn-mobile-to-basket {
+  display: none;
+}
+
+@media (max-width: 991px) {
+
+  .desctop-menu {
+    display: none;
+  }
+
+  .chat-wrapper {
+    display: none;
+  }
+
+  /* --- index.html media 991px --- */
+  .content {
+    .mobile-product-listing-sidebar {
+      display: none;
+    }
+
+    .home-desctop-card {
+      height: 132px;
+      flex-direction: row;
+
+      .card-photo {
+        width: 122px;
+        height: 100%;
+
+        img {
+          width: auto;
+          height: 70%;
+        }
+      }
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+      display: none;
+    }
+  }
+
+
+
+  /* --- product_page.html media 991px --- */
+  .content {
+    .product-info-wrapper {
+      padding: 0;
+
+      .card-rating {
+        display: inline-flex;
+      }
+    }
+  }
+
+  .product-page-heading {
+    margin: 15px 0 0 0;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* --- index.html media 767px --- */
+  .slide-1 {
+    .slide-1__img {
+      position: absolute;
+      width: 40%;
+      background-size: cover;
+      background-position: 80%;
+      left: 0;
+
+      img {
+        max-width: none;
+        right: 20%;
+      }
+    }
+
+    .slide-1__info {
+      left: 0;
+      justify-content: center;
+      align-items: center;
+
+      .slide-1__info-text {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+    }
+
+    .slide-1__sale {
+      top: -6%;
+      left: auto;
+      right: -3%;
+
+      p {
+        font-size: 12px;
+      }
+
+      span {
+        font-size: 20px;
+      }
+
+      .text-bold {
+        font-size: 30px;
+      }
+    }
+  }
+
+  .content {
+    .home-desctop-card {
+      .card-body {
+        width: 70%;
+
+        .card-text {
+          font-size: 14px;
+        }
+
+        .card-rating {
+
+          &-1,
+          &-2,
+          &-3,
+          &-4,
+          &-5 {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+
+    /* --- Digital_cameras.html media 767px --- */
+    .horizontal-card-product-listing {
+      height: 170px;
+
+      .row {
+        height: 100%;
+      }
+
+      .card-photo {
+        background-color: $card-photo-bg;
+        height: 100%;
+      }
+
+      .card-body {
+        border: none;
+        height: 100%;
+
+        .card-text {
+          font-size: 14px;
+        }
+
+        .card-rating {
+
+          &-1,
+          &-2,
+          &-3,
+          &-4,
+          &-5 {
+            font-size: 14px;
+          }
+        }
+
+        .btn-mobile-to-basket {
+          display: block;
+          width: 130px;
+        }
+
+        .card-price,
+        .card-price-sale {
+          display: flex;
+        }
+      }
+
+      .price-block {
+        display: none;
+      }
+
+      .rating-reviews {
+        display: none;
+      }
+    }
+
+    /* --- product_page.html media 767px --- */
+    .product-information {
+      .price-guarantee {
+        bottom: 0;
+
+        button {
+          width: 100%;
+        }
+      }
+
+      label {
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  /* --- footer media 991px --- */
+  .footer {
+    .footer-nav {
+      span {
+        display: flex;
+        flex-direction: column;
+
+        .footer-nav-border {
+          display: none;
+        }
+
+        a {
+          margin-bottom: 8px;
+        }
+      }
+    }
+
+    .footer-info {
+      text-align: left;
+      margin-top: 16px;
+    }
+  }
+
+  /* --- login.html media 767px --- */
+  .content {
+
+    .form-heading,
+    .form-heading-register {
+      text-align: left;
+      margin: 0;
+
+      &-text {
+        font-size: 20px;
+      }
+    }
+
+    .login-form {
+      border: none;
+      padding: 0;
+
+      .form-login-btn {
+        width: 100%;
+        margin-bottom: 25px;
+      }
+    }
+
+    .form-heading-or {
+      display: none;
+    }
+
+    .social {
+      flex-direction: column;
+
+      button {
+        width: 100%;
+        position: relative;
+        margin-bottom: 13px;
+
+        .social-btn-text {
+          position: absolute;
+          right: 0;
+          left: 0;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+@media (max-width: 575px) {
+  #MobileFormSearch:checked~form {
+    left: 15% !important;
+  }
+
+  /* --- Digital_cameras.html media 575px --- */
+  .content {
+    padding-top: 0;
+
+    .product-card-heading {
+      margin-top: 22px;
+    }
+  }
+
+  /* --- index.html media 575px --- */
+
+  .header {
+    .mobile-menu-list {
+
+      .list-item {
+        border-left: 0;
+        border-right: 0;
+
+      }
+    }
+  }
+
+
+  .content {
+    .sidebar-wrapper,
+    .carousel-wrapper
+
+      /* --- index.html , product_page.html media 575px --- */
+    {
+      padding: 0;
+    }
+
+    .slide-1 {
+
+      .slide-1__img {
+        img {
+          right: 12%;
+        }
+      }
+
+      .slide-1__info {
+        .slide-1__info-text {
+          font-size: 32px;
+          line-height: 35px;
+        }
+      }
+
+      .slide-1__sale {
+        width: 96px;
+        height: 96px;
+        line-height: 12px;
+        top: -4%;
+        right: -4%;
+      }
+    }
+  }
+
+  /* --- product_page.html media 575px --- */
+  #myTab {
+    flex-wrap: nowrap;
+  }
+
+  /* --- login.html media --- */
+  .content {
+
+    .form-heading,
+    .form-heading-register {
+      margin: 22px 0 0 0;
+    }
+  }
+}
