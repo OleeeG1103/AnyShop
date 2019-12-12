@@ -1,0 +1,18 @@
+@mixin list-group-item-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: $list-group-item-color;
+  width: calc(100% - 7px);
+  cursor: pointer;
+}
+
+@mixin mobile-menu {
+  background-color: $body-bg;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}

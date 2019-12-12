@@ -1,0 +1,30 @@
+.accordion-wrapper {
+  .list-item {
+    flex-wrap: wrap;
+  }
+
+  .accordion-list-active {
+
+    li {
+      border: none;
+    }
+    a {
+      font-size: 14px;
+    }
+
+    .accordion-item-active {
+      color: $list-group-item-color-hover;
+    }
+  }
+
+  #CameraPhoto-List,
+  #HomeCinemaTvVideo-List,
+  #MobilePhones-List,
+  #ComputersComponents-List {
+    position: relative;
+    width: 100%;
+    left: 0;
+
+  }
+}
+

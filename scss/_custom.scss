@@ -1,0 +1,29 @@
+$primary: orange;
+
+$blue: #0275D8;
+
+$border-radius: 0;
+
+$link-color: #373A3C;
+
+$dropdown-spacer: 0;
+
+$link-hover-decoration: none;
+
+$carousel-control-prev-icon-bg: url("../img/carousel_prev_next_bg.png");
+$carousel-control-next-icon-bg: url("../img/carousel_prev_next_bg.png");
+$carousel-control-icon-width: 34px;
+$carousel-control-width: 7%;
+$carousel-indicator-width: 10px;
+$carousel-indicator-height: 10px;
+$carousel-indicator-active-bg: transporante;
+
+$nav-tabs-link-active-color: orange;
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: /* 768px */ 769px,
+        lg: 992px,
+        xl: 1200px
+)

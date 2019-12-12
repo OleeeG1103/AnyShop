@@ -1,0 +1,16 @@
+.footer {
+  border-top: 1px solid $card-photo-bg;
+  padding-top: 21px;
+  padding-bottom: 21px;
+  flex: 0 0 auto;
+
+  .footer-nav,
+  .footer-info {
+    font-size: 14px;
+  }
+
+  .footer-info {
+    text-align: right;
+  }
+
+}

@@ -1,0 +1,62 @@
+.carousel-product-page {
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 12%;
+    top: -30px;
+    opacity: 1;
+  }
+
+  .slide-1,
+  .slide-2,
+  .slide-3,
+  .slide-4,
+  .slide-5 {
+    background-image: none;
+    background-color: $card-photo-bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 410px;
+    position: relative;
+    z-index: 1;
+
+    img {
+      mix-blend-mode: darken;
+      max-width: 75%;
+      max-height: 75%;
+    }
+  }
+
+  .carousel-indicators {
+    position: relative;
+    margin: 0;
+    padding-left: 20px;
+    height: 80px;
+    background-color: #E3E5E6;
+    justify-content: flex-start;
+    align-items: center;
+
+    li {
+      border-radius: 0;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 1;
+      background-color: $carousel-btn-text-color;
+      border: 1px solid #979797;
+
+      img {
+        width: auto;
+        height: 38px;
+      }
+    }
+
+    .active {
+      border: 1px solid $list-group-item-color-hover;
+      box-shadow: 0 0 4px rgba(217, 83, 79, 0.5);
+    }
+  }
+}
