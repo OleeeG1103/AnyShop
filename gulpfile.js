@@ -7,21 +7,21 @@ var gulp = require("gulp"),
 
 
 gulp.task("sass", function () {
-    return gulp.src("src/scss/style.scss")  // беру scss
-        .pipe(sass().on("error", sass.logError)) // компилирую в css
-        .pipe(concat("index.css")) // меняю имя (из телеграма style в index :) )
-        .pipe(gulp.dest("src/css")); // скидую результаты в src/css
+    return gulp.src("src/scss/style.scss")  
+        .pipe(sass().on("error", sass.logError)) 
+        .pipe(concat("index.css")) 
+        .pipe(gulp.dest("src/css")); 
 
 });
 
 gulp.task("watch", function () {
-    gulp.watch("src/scss/*.scss", gulp.series("sass")); // компилируем на автомате
+    gulp.watch("src/scss/*.scss", gulp.series("sass")); 
 
 });
 
 gulp.task("cssDist", function () {
-    return gulp.src("src/css/index.css")  // если все гуд беру уже готовые стили css
-        .pipe(gulp.dest("dist/css")); // скидую в dist
+    return gulp.src("src/css/index.css")  
+        .pipe(gulp.dest("dist/css")); 
 
 });
 
