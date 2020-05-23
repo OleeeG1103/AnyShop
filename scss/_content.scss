@@ -273,7 +273,7 @@
       cursor: pointer;
     }
 
-    #ViewAllList:checked~.specifications-item-view-all {
+    #ViewAllList:checked ~ * .specifications-item-view-all {
       display: list-item;
     }
 
