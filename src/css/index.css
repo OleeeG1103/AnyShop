@@ -7350,7 +7350,7 @@ a.text-dark:hover, a.text-dark:focus {
   .content .product-information label {
     color: orange;
     cursor: pointer; }
-  .content .product-information #ViewAllList:checked ~ .specifications-item-view-all {
+  .content .product-information #ViewAllList:checked ~ * .specifications-item-view-all {
     display: list-item; }
   .content .product-information .card-price-sale {
     font-size: 28px;
